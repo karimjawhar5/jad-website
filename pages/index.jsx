@@ -25,9 +25,9 @@ export default function Home({ projects, summaries, techs}) {
         </Head>
 
         <main className="text-gray-950 dark:text-gray-200 font-light">
-          <div className="flex flex-wrap bg-white dark:bg-gray-950 lg:max-w-screen-xl md:max-w-screen-md  mx-auto px-6 lg:px-8 py-20">
+          <div className="flex flex-wrap lg:max-w-screen-xl md:max-w-screen-md  mx-auto px-6 lg:px-8 py-20">
 
-            <div className="w-full lg:pr-8 lg:w-1/2 border-b lg:border-r lg:border-b-0 border-gray-700">
+            <div className="w-full lg:pr-8 lg:w-1/2 border-b lg:border-r lg:border-b-0 dark:border-gray-700 border-gray-200">
 
               <h1 className="lg:leading-snug text-4xl md:text-5xl text-gray-950 dark:text-gray-100 ">Hello, I'm <br /> <span className="font-medium">Karim Jaouhar</span></h1>
               <p className="mt-8 md:mt-10">As a 3rd-year <u>computer science student</u> at York University, I am passionate about exploring the vast field of computer science and continually expanding my knowledge and skill set.<br /><br /> I have a strong foundation in <u>data structures and algorithm design</u>, as well as some experience in <u>software development</u>, <u>cybersecurity</u>, and <u>machine learning</u>, I am constantly <u>seeking opportunities</u> to apply my skills and provide value to a team.</p>
