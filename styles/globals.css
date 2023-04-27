@@ -32,5 +32,8 @@ input:invalid {
 input {
   border: 1px solid gray;
 }
+.experience-box{
+  height:600px;
+}
 
 
