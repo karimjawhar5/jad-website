@@ -24,3 +24,13 @@ body {
 h1{
   font-family: 'Open Sans', sans-serif;
 }
+
+input:invalid {
+  border-color: 1px solid red;
+}
+
+input {
+  border: 1px solid gray;
+}
+
+
