@@ -10,8 +10,8 @@ function ScrollableBox({ children }) {
   }, []);
 
   return (
-    <div ref={scrollableBoxRef} className=" experience-box border border-gray-800 overflow-y-scroll">
-      <div className="p-4">
+    <div ref={scrollableBoxRef} className=" experience-box border border-gray-200 dark:border-gray-800 overflow-y-scroll">
+      <div className=" p-2 md:px-4 py-2">
         {children}
       </div>
     </div>

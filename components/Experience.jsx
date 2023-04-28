@@ -5,7 +5,7 @@ import ScrollableBox from './ScrollableBox';
 function Experience() {
   return (
     <div>
-      <h2 className='mb-6 font-medium '>Experience</h2>
+      <h2 className='mb-6 font-medium '>Time Line</h2>
       <ScrollableBox>
       <TimeLine />
       </ScrollableBox>

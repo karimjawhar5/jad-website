@@ -7,7 +7,7 @@ import {useState} from 'react'
 import { FaGithub} from 'react-icons/fa';
 import {replaceSpacesWithHyphens} from '../pages/api/business'
 
-const PROJECTS_PER_PAGE = 4;
+const PROJECTS_PER_PAGE = 5;
 
 export default function Projects({ projects, summaries, techs }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,7 +19,7 @@ export default function Projects({ projects, summaries, techs }) {
   const totalPages = Math.ceil((projects?.length || 0) / PROJECTS_PER_PAGE);
 
   return (
-    <div>
+    <div className=' md:w-5/6 lg:w-11/12'>
       <h2 className='mb-6 font-medium'> My Projects </h2>
       {visibleProjects?.map((project, i) => (
         <ProjectCard
@@ -31,7 +31,7 @@ export default function Projects({ projects, summaries, techs }) {
           image={project.cover?.external.url || '/fav.png'}
         />
       ))}
-      <div className='flex justify-center my-6'>
+      <div className='flex justify-center mt-6'>
         {Array.from({ length: totalPages }, (_, i) => (
           <button
             key={i}
@@ -50,7 +50,7 @@ export default function Projects({ projects, summaries, techs }) {
 
 function ProjectCard ({title, id, summary, techs, image}){
   return (
-        <div className='flex space-x-5 bg-gray-100 dark:bg-gray-900 max-w-xl rounded-md my-4  px-4 md:px-6 py-6'>
+        <div className='flex space-x-5 bg-gray-100 dark:bg-gray-900 rounded-md my-2  px-4 md:px-4 py-5'>
 
           <div className='w-1/6'>
             <Image alt={"Page-Cover"} src={image} width={100} height={100} className="w-16 h-14 rounded-xl overflow-hidden object-cover object-center"/>
@@ -59,7 +59,7 @@ function ProjectCard ({title, id, summary, techs, image}){
           <div className='w-5/6'>
             <div className="flex">
               <div className='w-3/5'>
-                <ul className='flex space-x-2 text-xs mb-2 text-blue-500 dark:text-blue-200 text-left'>
+                <ul className='flex space-x-2 text-xs mb-1 text-blue-500 dark:text-blue-200 text-left'>
                   {techs.map((tech)=> <li key={tech[1]}><h6>{tech[0]}</h6></li>)}
                 </ul>
               </div>
@@ -72,10 +72,10 @@ function ProjectCard ({title, id, summary, techs, image}){
             </div>
 
           <Link href={`/projects/${id}`}>
-            <h3 className='text-lg text-gray-950 dark:text-gray-100 font-medium mb-1'>{title}</h3>
+            <h3 className='text-gray-950 dark:text-gray-100 font-medium mb-1'>{title}</h3>
           </Link>
 
-          <p className='text-xs font-light'>{summary}</p>
+          <p className='text-sm font-light'>{summary}</p>
           </div>
         </div>
   )

@@ -7,8 +7,13 @@ import 'prismjs/themes/prism-tomorrow.css'
 
 // used for rendering equations (optional)
 import 'katex/dist/katex.min.css'
+import Layout from '../components/Layout'
 
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return(
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }

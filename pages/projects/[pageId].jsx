@@ -34,6 +34,7 @@ const Modal = dynamic(
 )
 
 import { NotionRenderer } from 'react-notion-x'
+import Head from 'next/head.js'
 
 export async function getStaticPaths() {
   const {response} = await getDatabasePages();
@@ -46,10 +47,13 @@ export async function getStaticPaths() {
 }
 
 
-export default function blogPost({ recordMap }) {
+export default function blogPost({ recordMap, title }) {
   return (
     <div>
-      <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={false} components={{
+      <Head>
+      <title>{title}</title>
+      </Head>
+      <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={true} components={{
       Code,
       Collection,
       Equation,
@@ -64,9 +68,12 @@ export default function blogPost({ recordMap }) {
 
 export async function getStaticProps({ params }){
   const {recordMap} = await getPageContent(notion2,params.pageId)
+  const {response} = await getDatabasePages();
+  const title = response.results[0].properties.Name.title[0].plain_text
   return {
     props:{
-      recordMap: recordMap
+      recordMap: recordMap,
+      title: title
     }
   }
 }

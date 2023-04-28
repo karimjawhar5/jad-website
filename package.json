@@ -13,6 +13,7 @@
     "autoprefixer": "10.4.14",
     "dotenv": "^16.0.3",
     "next": "13.3.1",
+    "nodemailer": "^6.9.1",
     "notion-client": "^6.16.0",
     "postcss": "8.4.23",
     "react": "18.2.0",
