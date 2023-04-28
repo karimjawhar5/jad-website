@@ -21,7 +21,7 @@ async function sendEmail(name, email, reason, message) {
       secure: false,
       auth: {
         user: 'karimjawhar5@gmail.com', // replace with your email address
-        pass: 'mnptrmkzjojsgilg', // replace with your email password
+        pass: process.env.GMAIL_PASSWORD, // replace with your email password
       },
     });
 
