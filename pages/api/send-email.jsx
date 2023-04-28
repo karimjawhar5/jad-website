@@ -14,18 +14,16 @@ export default async function handler(req, res) {
 
 async function sendEmail(name, email, reason, message) {
   try {
-    // create reusable transporter object using the default SMTP transport
     let transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       port: 587,
       secure: false,
       auth: {
-        user: 'karimjawhar5@gmail.com', // replace with your email address
-        pass: process.env.GMAIL_PASSWORD, // replace with your email password
+        user: 'karimjawhar5@gmail.com',
+        pass: process.env.GMAIL_PASSWORD,
       },
     });
-
-    // send mail with defined transport object
+    
     let info = await transporter.sendMail({
       from: '"Webiste Form" <karimjawhar5@gmail.com>',
       to: 'karimjawhar5@gmail.com',
