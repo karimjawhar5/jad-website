@@ -5,21 +5,11 @@ export function replaceSpacesWithHyphens(text) {
   return hyphenatedText;
 }
 
-function MyComponent() {
-  const myText = "This is some text with spaces.";
-  const hyphenatedText = replaceSpacesWithHyphens(myText);
-  return (
-    <div>
-      <p>{hyphenatedText}</p>
-    </div>
-  );
-}
-
 
 export async function getTechs(database){
     if(database){
       const pageIds = database.results.map((page)=>page.id)
-      const techId = database.results[1].properties.Tech.id
+      const techId = database.results[0].properties.Tech.id
       const techs = await Promise.all(pageIds.map(async (pageId) => {
         const tech = await getPageProperties(pageId, techId)
         const techTags = tech.response.multi_select;
@@ -39,7 +29,7 @@ export async function getTechs(database){
   export async function getSummaries(database){
     if(database){
       const pageIds = database.results.map((page)=>page.id)
-      const summaryId = database.results[1].properties.Summary.id
+      const summaryId = database.results[0].properties.Summary.id
       const summaries = await Promise.all(pageIds.map(async (pageId) => {
         const summary = await getPageProperties(pageId, summaryId)
         if (summary.response.results.length>0){

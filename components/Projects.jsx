@@ -7,7 +7,7 @@ import {useState} from 'react'
 import { FaGithub} from 'react-icons/fa';
 import {replaceSpacesWithHyphens} from '../pages/api/business'
 
-const PROJECTS_PER_PAGE = 5;
+const PROJECTS_PER_PAGE = 4;
 
 export default function Projects({ projects, summaries, techs }) {
   const [currentPage, setCurrentPage] = useState(1);
