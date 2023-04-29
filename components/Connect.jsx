@@ -106,7 +106,7 @@ function Connect() {
 
         <input type="text" name="honeypot" className='hidden' value={values.honeyPot} onChange={handleChange}/>
 
-        <input className='p-2 font-medium rounded-md w-40 border border-gray-800 dark:border-gray-300 text-gray-800 dark:text-gray-300 cursor-pointer mt-2' type="submit" value={sending?"Sendig": "Send"} />
+        <input className='p-2 font-medium rounded-md w-40 border border-gray-800 dark:border-gray-300 text-gray-800 dark:text-gray-300 cursor-pointer mt-2' type="submit" value={sending?"Sending": "Send"} />
       </motion.form>
     </div>
   )
