@@ -55,7 +55,7 @@ function Connect() {
       className='mb-6 font-medium'>Contact Me</motion.h2>
       <div>
         <motion.ul 
-        initial={{ y: 10, opacity: 0 }}
+        initial={{ y: 1, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
         className='space-y-2 mb-6'>
@@ -63,9 +63,9 @@ function Connect() {
           <li><Link href="mailto:karimjawhar5@gmail.com"><u><b>Email:</b></u> &nbsp; karimjawhar5@gmail.com</Link></li>
         </motion.ul >
         <motion.ul 
-        initial={{ y: 10, opacity: 0 }}
+        initial={{ y: 1, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.5, ease: "easeOut" }}
+        transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
         className='flex space-x-4 text-sm md:text-sm font-medium text-blue-500 dark:text-blue-200'>
           <li><a target="_blank" href="https://www.linkedin.com/in/karimjaouhar/"><FaLinkedin className='inline-block w-5 h-5'/><p className='inline-block pl-2'>LinkedIn</p></a></li>
           <li><a target="_blank" href="https://twitter.com/KarimJawhar02"><FaTwitter className='inline-block w-5 h-5'/><p className='inline-block pl-2'>Twitter</p></a></li>
@@ -74,7 +74,7 @@ function Connect() {
       </div>
 
       <motion.form
-      initial={{ y: 10, opacity: 0 }}
+      initial={{ y: 1, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
       className='mt-8 w-full md:w-3/4 text-sm' onSubmit={handleSubmit}>
