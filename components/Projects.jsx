@@ -7,6 +7,8 @@ import {useState} from 'react'
 import { FaGithub} from 'react-icons/fa';
 import {replaceSpacesWithHyphens} from '../pages/api/business'
 
+import { motion } from "framer-motion";
+
 const PROJECTS_PER_PAGE = 4;
 
 export default function Projects({ projects, summaries, techs }) {
@@ -20,7 +22,11 @@ export default function Projects({ projects, summaries, techs }) {
 
   return (
     <div className=' md:w-5/6 lg:w-11/12'>
-      <h2 className='mb-6 font-medium'> My Projects </h2>
+      <motion.h2 
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
+      className='mb-6 font-medium'> My Projects </motion.h2>
       {visibleProjects?.map((project, i) => (
         <ProjectCard
           key={project.id}
@@ -29,9 +35,14 @@ export default function Projects({ projects, summaries, techs }) {
           summary={summaries[i]}
           techs={techs[i]}
           image={project.cover?.external.url || '/fav.png'}
+          delayTime={i/10+0.4}
         />
       ))}
-      <div className='flex justify-center mt-6'>
+      <motion.div 
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
+      className='flex justify-center mt-6'>
         {Array.from({ length: totalPages }, (_, i) => (
           <button
             key={i}
@@ -43,14 +54,18 @@ export default function Projects({ projects, summaries, techs }) {
             {i + 1}
           </button>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
 
-function ProjectCard ({title, id, summary, techs, image}){
+function ProjectCard ({title, id, summary, techs, image, delayTime}){
   return (
-        <div className='flex space-x-5 bg-gray-100 dark:bg-gray-900 rounded-md my-2  px-4 md:px-4 py-5'>
+        <motion.div
+        initial={{ y: 10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: delayTime, duration: 0.5, ease: "easeOut" }}
+         className='flex space-x-5 bg-gray-100 dark:bg-gray-900 rounded-md my-2  px-4 md:px-4 py-5'>
 
           <div className='w-1/6'>
             <Image alt={"Page-Cover"} src={image} width={100} height={100} className="w-16 h-14 rounded-xl overflow-hidden object-cover object-center"/>
@@ -77,6 +92,6 @@ function ProjectCard ({title, id, summary, techs, image}){
 
           <p className='text-sm font-light'>{summary}</p>
           </div>
-        </div>
+        </motion.div>
   )
 }

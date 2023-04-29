@@ -31,16 +31,32 @@ export default function Home({ projects, summaries, techs}) {
 
             <div className="w-full lg:pr-8 lg:w-1/2 border-b lg:border-r lg:border-b-0 dark:border-gray-700 border-gray-200">
 
-              <h1 className="lg:leading-snug text-4xl md:text-5xl text-gray-950 dark:text-gray-100 ">Hello, I'm <br /> <span className="font-medium">Karim Jaouhar</span></h1>
-              <p className="mt-8 md:mt-10">As a 3rd-year <u>computer science student</u> at York University, I am passionate about exploring the vast field of computer science and continually expanding my knowledge and skill set.<br /><br /> I have a strong foundation in <u>data structures and algorithm design</u>, as well as some experience in <u>software development</u>, <u>cybersecurity</u>, and <u>machine learning</u>, I am constantly <u>seeking opportunities</u> to apply my skills and provide value to a team.</p>
+              <motion.h1 
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0, duration: 0.5, ease: "easeOut" }} 
+              className="lg:leading-snug text-4xl md:text-5xl text-gray-950 dark:text-gray-100 ">Hello, I'm <br /> <span className="font-medium">Karim Jaouhar</span></motion.h1>
+              <motion.p
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }} 
+               className="mt-8 md:mt-10">As a 3rd-year <u>computer science student</u> at York University, I am passionate about exploring the vast field of computer science and continually expanding my knowledge and skill set.<br /><br /> I have a strong foundation in <u>data structures and algorithm design</u>, as well as some experience in <u>software development</u>, <u>cybersecurity</u>, and <u>machine learning</u>, I am constantly <u>seeking opportunities</u> to apply my skills and provide value to a team.</motion.p>
               
-              <ul className="mt-10 md:mt-12 text-blue-500 dark:text-blue-300">
+              <motion.ul
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }} 
+              className="mt-10 md:mt-12 text-blue-500 dark:text-blue-300">
                 {activeSection=="Projects"?<li><a className="cursor-pointer font-medium">__ Projects</a></li>:<li><a className="cursor-pointer hover:font-medium" onClick={()=> handleClick('Projects')}>_ Projects</a></li>}
                 {activeSection=="Experience"?<li className="pt-2"><a className="cursor-pointer font-medium">__ Timeline</a></li>:<li className="pt-2"><a className="cursor-pointer hover:font-medium" onClick={()=> handleClick('Experience')}>_ Timeline</a></li>}
                 {activeSection=="Connect"?<li className="pt-2"><a  className="cursor-pointer font-medium">__ Connect</a></li>:<li className="pt-2"><a  className="cursor-pointer hover:font-medium" onClick={()=>handleClick('Connect')}>_ Connect</a></li>}
-              </ul>
+              </motion.ul>
 
-              <div className="flex mt-10 md:mt-16 mb-8">
+              <motion.div
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }} 
+               className="flex mt-10 md:mt-16 mb-8">
               <ul className="flex w-1/2 text-sm space-x-3">
                 <li>
                   <a target="_blank" href="https://github.com/karimjawhar5">
@@ -68,7 +84,7 @@ export default function Home({ projects, summaries, techs}) {
                 </li>
               </ul>
 
-              </div>
+              </motion.div>
 
             </div>
 

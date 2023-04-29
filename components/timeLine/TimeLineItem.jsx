@@ -1,6 +1,12 @@
-export function TimeLineItem({date, emojis, content, next, future}) {
+import { motion } from "framer-motion";
+
+export function TimeLineItem({date, emojis, content, next, future, timeDelay}) {
   return (
-    <div className="flex h-20 space">
+    <motion.div 
+    initial={{ y: 10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: timeDelay, duration: 0.5, ease: "easeOut" }}
+    className="flex h-20 space">
             {future?
             <div className="bg-gray-200 dark:bg-gray-800 text-xs font-bold py-1 px-1 rounded-md w-2/12 md:w-1/12 my-auto text-center">
                 <p>{date}</p>
@@ -43,6 +49,6 @@ export function TimeLineItem({date, emojis, content, next, future}) {
                 </div>
             </div>
         </div>
-    </div>
+    </motion.div>
   )
 }
