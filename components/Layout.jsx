@@ -3,17 +3,16 @@ import React from 'react'
 
 function Layout({children}) {
   return (
-    <div>
+    <div className='page-content-styler'>
       <Head>
-      <link rel="icon" href="/fav.png" />
-    </Head>
+        <link rel="icon" href="/fav.png" />
+      </Head>
     
-      <header>
-      </header>
+      <header className='h-3 md:h-8' style={{ flex: 1 }}></header>
 
-      <main>{children}</main>
+      <main style={{ flex: 1 }}>{children}</main>
 
-      <footer className='w-full text-center text-sm font-light py-2 dark:text-gray-200 text-gray-800'>@2023 Karim Jaouhar - Protfolio Website</footer>
+      <footer className='w-full text-center text-xs font-light py-2 dark:text-gray-300 text-gray-800'>© 2023 Karim Jaouhar - Portfolio Website</footer>
 
     </div>
   )

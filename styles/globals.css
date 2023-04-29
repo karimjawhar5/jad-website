@@ -36,4 +36,12 @@ input {
   height:600px;
 }
 
+.page-content-styler{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
+.light {
+  background-color: #fff; /* replace with your desired background color */
+}

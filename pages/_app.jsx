@@ -1,17 +1,20 @@
-import '@/styles/globals.css'
-// core styles shared by all of react-notion-x (required)
-import 'react-notion-x/src/styles.css'
-
-// used for code syntax highlighting (optional)
-import 'prismjs/themes/prism-tomorrow.css'
-
-// used for rendering equations (optional)
-import 'katex/dist/katex.min.css'
-import Layout from '../components/Layout'
-
+import { useRouter } from 'next/router';
+import '@/styles/globals.css';
+import 'react-notion-x/src/styles.css';
+import 'prismjs/themes/prism-tomorrow.css';
+import 'katex/dist/katex.min.css';
+import "prismjs/themes/prism.css";
+import Layout from '../components/Layout';
 
 export default function App({ Component, pageProps }) {
-  return(
+  const router = useRouter();
+  const isProjectPage = router.pathname.startsWith('/projects/');
+  
+  if (isProjectPage) {
+    return (<body className='light'><Component {...pageProps} /></body>);
+  }
+
+  return (
     <Layout>
       <Component {...pageProps} />
     </Layout>

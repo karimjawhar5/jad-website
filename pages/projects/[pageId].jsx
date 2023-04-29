@@ -53,7 +53,7 @@ export default function blogPost({ recordMap, title }) {
       <Head>
       <title>{title}</title>
       </Head>
-      <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={true} components={{
+      <NotionRenderer recordMap={recordMap} fullPage={true} darkMode={false} components={{
       Code,
       Collection,
       Equation,

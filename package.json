@@ -12,6 +12,7 @@
     "@notionhq/client": "^2.2.4",
     "autoprefixer": "10.4.14",
     "dotenv": "^16.0.3",
+    "framer-motion": "^10.12.4",
     "next": "13.3.1",
     "nodemailer": "^6.9.1",
     "notion-client": "^6.16.0",
