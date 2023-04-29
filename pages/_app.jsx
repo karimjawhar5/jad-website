@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
   const isProjectPage = router.pathname.startsWith('/projects/');
   
   if (isProjectPage) {
-    return (<body className='light'><Component {...pageProps} /></body>);
+    return (<Component {...pageProps} />);
   }
 
   return (
