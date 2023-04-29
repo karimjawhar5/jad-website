@@ -45,7 +45,7 @@ export default function Home({ projects, summaries, techs}) {
               <motion.ul
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }} 
+              transition={{ delay: 0.3, duration: 0.5, ease: "easeOut" }} 
               className="mt-10 md:mt-12 text-blue-500 dark:text-blue-300">
                 {activeSection=="Projects"?<li><a className="cursor-pointer font-medium">__ Projects</a></li>:<li><a className="cursor-pointer hover:font-medium" onClick={()=> handleClick('Projects')}>_ Projects</a></li>}
                 {activeSection=="Experience"?<li className="pt-2"><a className="cursor-pointer font-medium">__ Timeline</a></li>:<li className="pt-2"><a className="cursor-pointer hover:font-medium" onClick={()=> handleClick('Experience')}>_ Timeline</a></li>}
@@ -55,7 +55,7 @@ export default function Home({ projects, summaries, techs}) {
               <motion.div
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }} 
+              transition={{ delay: 0.3, duration: 0.5, ease: "easeOut" }} 
                className="flex mt-10 md:mt-16 mb-8">
               <ul className="flex w-1/2 text-sm space-x-3">
                 <li>
