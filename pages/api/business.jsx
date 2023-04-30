@@ -44,3 +44,22 @@ export async function getTechs(database){
       return []
     }
   }
+
+  export async function getGithubURL(database){
+    if(database){
+      const pageIds = database.results.map((page)=>page.id)
+      const porpertyId = database.results[0].properties.Github.id
+      const githubs = await Promise.all(pageIds.map(async (pageId) => {
+        const github = await getPageProperties(pageId, porpertyId)
+        if (github.response.results.length>0){
+          return (github.response.results[0].rich_text.plain_text);
+        }else{
+          return ""
+        }
+        
+      }));
+      return githubs
+    }else{
+      return []
+    }
+  }

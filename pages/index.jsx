@@ -2,7 +2,7 @@ import Head from "next/head"
 import { useState } from 'react'
 
 import { getDatabasePages } from "./api/connectNotion.jsx";
-import {getTechs, getSummaries} from './api/business.jsx'
+import {getTechs, getSummaries, getGithubURL} from './api/business.jsx'
 
 import { FaGithub, FaLinkedin} from 'react-icons/fa';
 
@@ -13,7 +13,7 @@ import Connect from "@/components/Connect.jsx"
 import { motion } from "framer-motion";
 
 
-export default function Home({ projects, summaries, techs}) {
+export default function Home({ projects, summaries, techs, githubs}) {
     const [activeSection, setActiveSection] = useState("Projects")
     function handleClick(section){
         setActiveSection(section)
@@ -74,7 +74,7 @@ export default function Home({ projects, summaries, techs}) {
               <ul className="flex w-1/2 text-sm space-x-3 md:space-x-4 justify-end -mt-1 md:-mt-2">
                 <li>
                   <button className="bg-gray-200 dark:bg-gray-800 font-normal py-2 px-4 rounded-full ml-5">
-                  <a href="/resume.pdf" download> Resume</a>
+                  <a href="/Karim_Jaouhar.pdf" download> Resume</a>
                 </button>
                 </li>
                 <li>
@@ -89,7 +89,7 @@ export default function Home({ projects, summaries, techs}) {
             </div>
 
             <div className="w-full lg:w-1/2 mt-8 lg:mt-0 lg:pl-8">
-              {activeSection === 'Projects' && <Projects projects = {projects} summaries={summaries} techs={techs} />}
+              {activeSection === 'Projects' && <Projects projects = {projects} summaries={summaries} techs={techs} githubs={githubs} />}
               {activeSection === 'Experience' && <Experience />}
               {activeSection === 'Connect' && <Connect />}
             </div>
@@ -102,11 +102,13 @@ export async function getStaticProps(){
   const {response} = await getDatabasePages();
   const summaries = await getSummaries(response);
   const techs = await getTechs(response)
+  const githubs = await getGithubURL(response)
   return {
     props:{
       projects: response.results,
       summaries: summaries,
-      techs: techs
+      techs: techs,
+      githubs: githubs
     },
     revalidate: 14400
   }

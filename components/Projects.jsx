@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 
 const PROJECTS_PER_PAGE = 4;
 
-export default function Projects({ projects, summaries, techs }) {
+export default function Projects({ projects, summaries, techs, githubs }) {
   const [currentPage, setCurrentPage] = useState(1);
 
   const startIndex = (currentPage - 1) * PROJECTS_PER_PAGE;
@@ -36,6 +36,7 @@ export default function Projects({ projects, summaries, techs }) {
           techs={techs[i]}
           image={project.cover?.external.url || '/fav.png'}
           delayTime={i/10+0.4}
+          github={githubs[i]}
         />
       ))}
       <motion.div 
@@ -59,7 +60,7 @@ export default function Projects({ projects, summaries, techs }) {
   );
 }
 
-function ProjectCard ({title, id, summary, techs, image, delayTime}){
+function ProjectCard ({title, id, summary, techs, github, image, delayTime}){
   return (
         <motion.div
         initial={{ y: 10, opacity: 0 }}
@@ -81,7 +82,7 @@ function ProjectCard ({title, id, summary, techs, image, delayTime}){
 
               <div className='w-2/5 text-right'>
                 <ul className='flex font-light text-sm space-x-4 text-gray-900 dark:text-gray-300 justify-end mt-1'>
-                  <li className='text-right'><Link href={"https://github.com/karimjawhar5/"+replaceSpacesWithHyphens(title)}><FaGithub className="cursor-pointer w-5 h-5"/></Link></li>
+                  <li className='text-right'><Link href={github}><FaGithub className="cursor-pointer w-5 h-5"/></Link></li>
                 </ul>
               </div>
             </div>
