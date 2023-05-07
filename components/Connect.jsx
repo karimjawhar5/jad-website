@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import Image from 'next/image';
 
 import Link from 'next/link'
 
@@ -52,26 +53,31 @@ function Connect() {
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
-      className='mb-6 font-medium'>Contact Me</motion.h2>
-      <div>
-        <motion.ul 
-        initial={{ y: 1, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
-        className='space-y-2 mb-6'>
-          <li><Link href="tel:6475494696"><u><b>Phone:</b></u> &nbsp; (647) 549 4696</Link></li>
-          <li><Link href="mailto:karimjawhar5@gmail.com"><u><b>Email:</b></u> &nbsp; karimjawhar5@gmail.com</Link></li>
-        </motion.ul >
-        <motion.ul 
-        initial={{ y: 1, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
-        className='flex space-x-4 text-sm md:text-sm font-medium text-blue-500 dark:text-blue-200'>
-          <li><a target="_blank" href="https://www.linkedin.com/in/karimjaouhar/"><FaLinkedin className='inline-block w-5 h-5'/><p className='inline-block pl-2'>LinkedIn</p></a></li>
-          <li><a target="_blank" href="https://twitter.com/KarimJawhar02"><FaTwitter className='inline-block w-5 h-5'/><p className='inline-block pl-2'>Twitter</p></a></li>
-          <li><a target="_blank" href="https://github.com/karimjawhar5"><FaGithub className='inline-block w-5 h-5'/><p className='inline-block pl-2 '>Github</p></a></li>
-        </motion.ul>
-      </div>
+      className='mb-6 font-medium'>
+        Contact Me
+      </motion.h2>
+
+      <motion.div 
+      initial={{ y: 1, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
+      className='md:flex md:space-x-4 mb-6'>
+
+        <Image src={"/PFP.jpg"} width={150} height={250} className='w-100 h-200 border dark:border-gray-700 border-gray-200'></Image>
+
+        <div>
+          <ul className='space-y-2 md:space-y-3 mb-6 md:mb-8 mt-6 md:mt-0'>
+            <li><u><b>Full Name:</b></u> &nbsp; Karim Jaouhar</li>
+            <li><Link href="tel:6475494696"><u><b>Phone:</b></u> &nbsp; (647) 549 4696</Link></li>
+            <li><Link href="mailto:karimjawhar5@gmail.com"><u><b>Email:</b></u> &nbsp; karimjawhar5@gmail.com</Link></li>
+          </ul>
+          <ul className='flex space-x-4 text-sm md:text-sm font-medium text-blue-500 dark:text-blue-200'>
+            <li><a target="_blank" href="https://www.linkedin.com/in/karimjaouhar/"><FaLinkedin className='inline-block w-5 h-5'/><p className='inline-block pl-2'>LinkedIn</p></a></li>
+            <li><a target="_blank" href="https://twitter.com/KarimJawhar02"><FaTwitter className='inline-block w-5 h-5'/><p className='inline-block pl-2'>Twitter</p></a></li>
+            <li><a target="_blank" href="https://github.com/karimjawhar5"><FaGithub className='inline-block w-5 h-5'/><p className='inline-block pl-2 '>Github</p></a></li>
+          </ul>
+        </div>
+      </motion.div >
 
       <motion.form
       initial={{ y: 1, opacity: 0 }}
