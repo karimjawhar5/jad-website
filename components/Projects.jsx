@@ -27,18 +27,21 @@ export default function Projects({ projects, summaries, techs, githubs }) {
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
       className='mb-6 font-medium'> My Projects </motion.h2>
-      {visibleProjects?.map((project, i) => (
+
+      {visibleProjects?.map((project, i) =>{
+        const index = i + (currentPage-1)*PROJECTS_PER_PAGE; // to show the right summary, tech, and github items for second page
+      return(
         <ProjectCard
           key={project.id}
           title={project.properties.Name.title[0]?.plain_text || ''}
           id={project.id}
-          summary={summaries[i]}
-          techs={techs[i]}
+          summary={summaries[index]}
+          techs={techs[index]}
           image={project.cover?.external.url || '/fav.png'}
           delayTime={i/10+0.4}
-          github={githubs[i]}
+          github={githubs[index]}
         />
-      ))}
+      )})}
       <motion.div 
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
