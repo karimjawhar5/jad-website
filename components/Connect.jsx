@@ -68,7 +68,7 @@ function Connect() {
         <div>
           <ul className='space-y-2 md:space-y-3 mb-6 md:mb-8 mt-6 md:mt-0'>
             <li><u><b>Full Name:</b></u> &nbsp; Karim Jaouhar</li>
-            <li><Link href="tel:6475494696"><u><b>Phone:</b></u> &nbsp; (647) 549 4696</Link></li>
+            <li><Link href="tel:14379616674"><u><b>Phone:</b></u> &nbsp; +1 (437) 961 6674</Link></li>
             <li><Link href="mailto:karimjawhar5@gmail.com"><u><b>Email:</b></u> &nbsp; karimjawhar5@gmail.com</Link></li>
           </ul>
           <ul className='flex space-x-4 text-sm md:text-sm font-medium text-blue-500 dark:text-blue-200'>
