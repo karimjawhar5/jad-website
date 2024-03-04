@@ -23,7 +23,17 @@ export default function Home({ projects, summaries, techs, githubs}) {
       <div>
         <Head>
           <title>Karim's Portfolio</title>
-          <meta name="Description" content="Welcome to Karim Jaouhar's Portfolio"/>
+          <meta name="description" content="Check out my portfolio to explore my projects, discover my journey, and get in touch." />
+
+          <meta property="og:title" content="Karim's Portfolio" />
+          <meta property="og:description" content="Check out my portfolio to explore my projects, discover my journey, and get in touch." />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://karimjaouhar.com/" />
+
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:creator" content="@KarimJawhar02" />
+          <meta name="twitter:title" content="Karim's Portfolio" />
+          <meta name="twitter:description" content="Check out my portfolio to explore my projects, discover my journey, and get in touch." />
         </Head>
 
         <main className="text-gray-950 dark:text-gray-200 font-light">
