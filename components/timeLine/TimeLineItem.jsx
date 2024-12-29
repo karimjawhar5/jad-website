@@ -43,6 +43,8 @@ export function TimeLineItem({date, emojis, content, next, future, timeDelay}) {
                 <div className=" bg-gray-200 dark:bg-gray-800 p-3 flex my-auto rounded-md">
                     <div className="w-1/12 px-2">
                         <p className="text-md">{emojis}</p>
+
+                        
                     </div>
                     <div className="w-11/12 px-2">
                         <p className="pl-2 text-xs md:text-sm">{content}</p>

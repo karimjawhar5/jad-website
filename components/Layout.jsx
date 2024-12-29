@@ -5,7 +5,7 @@ function Layout({children}) {
   return (
     <div className='page-content-styler'>
       <Head>
-        <link rel="icon" href="/fav.png" />
+      <link rel="icon" href="\fav.png" />
       </Head>
     
       <header className='h-3 md:h-8' style={{ flex: 1 }}></header>

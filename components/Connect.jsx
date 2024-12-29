@@ -63,7 +63,7 @@ function Connect() {
       transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
       className='md:flex md:space-x-4 mb-6'>
 
-        <Image src={"/PFP.jpg"} alt={"Profile Picture"} width={150} height={250} className='w-100 h-auto border dark:border-gray-700 border-gray-200'></Image>
+        <Image src={"/PFP.jpg"} alt={"Profile Picture"} width={148} height={167} className='w-100 h-auto border dark:border-gray-700 border-gray-200'></Image>
 
         <div>
           <ul className='space-y-2 md:space-y-3 mb-6 md:mb-8 mt-6 md:mt-0'>

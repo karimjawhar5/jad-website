@@ -59,8 +59,15 @@ export default function Home({ projects, summaries, techs, githubs}) {
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }} 
-               className="mt-8 md:mt-10">I'm a Computer Science Graduate from York University, I am passionate about exploring the vast field of computer science and continually expanding my knowledge and skill set.<br /><br /> I have a strong foundation in <u>data structures and algorithm design</u>, as well as experience in <u>software development</u>, <u>cybersecurity</u>, <u>machine learning</u>, and <u>web development</u>. I am continually seeking opportunities to apply my skills and provide value to a team.</motion.p>
-              
+               className="mt-8 md:mt-10">I’m a <b className="font-bold">cybersecurity consultant at Deloitte </b>, specialized in <b className="font-bold">cryptography, data protection, and data loss prevention</b>. I graduated with a Computer Science degree from York University, and I’ve since honed my expertise with specialized cybersecurity certifications. Through my professional career I've helped organizations in the Financial Services, Healthcare, and Consumer industries improve their data protection and security posture.
+               </motion.p>
+               <motion.p
+              initial={{ y: 10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }} 
+              className="mt-4 md:mt-6">
+               Outside of work, I enjoy skateboarding and bouldering while continuously exploring the latest cybersecurity trends and emerging technologies. I love programming and embedded systems and often channel that passion into building overengineered solutions for fun. On the side, I run a web development agency that has helped several businesses in the Greater Toronto Area build and enhance their online presence.
+               </motion.p>
               <motion.ul
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
