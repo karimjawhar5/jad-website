@@ -59,14 +59,15 @@ export default function Home({ projects, summaries, techs, githubs}) {
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }} 
-               className="mt-8 md:mt-10">I’m a <b className="font-bold">cybersecurity consultant at Deloitte </b>, specialized in <b className="font-bold">cryptography, data protection, and data loss prevention</b>. I graduated with a Computer Science degree from York University, and I’ve since honed my expertise with specialized cybersecurity certifications. Through my professional career I've helped organizations in the Financial Services, Healthcare, and Consumer industries improve their data protection and security posture.
+               className="mt-8 md:mt-10">
+                A <b className="font-medium">cybersecurity consultant at Deloitte</b>, specializing in cryptography and data protection. After earning a BSc. degree in Computer Science, I dove curiously into the world of cybersecurity. Since then, I’ve had the privilege of helping organizations across industries like finance, healthcare, and consumer strengthen their data security and privacy posture.
                </motion.p>
                <motion.p
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }} 
               className="mt-4 md:mt-6">
-               Outside of work, I enjoy skateboarding and bouldering while continuously exploring the latest cybersecurity trends and emerging technologies. I love programming and embedded systems and often channel that passion into building overengineered solutions for fun. On the side, I run a web development agency that has helped several businesses in the Greater Toronto Area build and enhance their online presence.
+               When I’m not working, you’ll likely find me skateboarding or geeking out over the latest cybersecurity trends and emerging technologies. I’m passionate about programming and embedded systems, and I have a knack for building overly engineered IoT solutions to solve simple problems. On the side, I run a web development agency, helping businesses in the Greater Toronto Area grow their online presence.
                </motion.p>
               <motion.ul
               initial={{ y: 10, opacity: 0 }}

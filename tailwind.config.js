@@ -15,8 +15,10 @@ module.exports = {
     },
     variants: {
       extend: {
-        // ...
        backgroundOpacity: ['active'],
+       fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+      },
       }
     }
   },
