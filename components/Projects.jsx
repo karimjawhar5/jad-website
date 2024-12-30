@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import {useState} from 'react'
 
-import { FaGithub} from 'react-icons/fa';
+import { FaLink} from 'react-icons/fa';
 import {replaceSpacesWithHyphens} from '../pages/api/business'
 
 import { motion } from "framer-motion";
@@ -26,7 +26,7 @@ export default function Projects({ projects, summaries, techs, githubs }) {
       initial={{ y: 10, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
-      className='mb-6 font-medium'> My Projects </motion.h2>
+      className='mb-6 font-medium'> My Experience </motion.h2>
 
       {visibleProjects?.map((project, i) =>{
         const index = i + (currentPage-1)*PROJECTS_PER_PAGE; // to show the right summary, tech, and github items for second page
@@ -85,7 +85,7 @@ function ProjectCard ({title, id, summary, techs, github, image, delayTime}){
 
               <div className='w-2/5 text-right'>
                 <ul className='flex font-light text-sm space-x-4 text-gray-900 dark:text-gray-300 justify-end mt-1'>
-                  <li className='text-right'><Link href={github}><FaGithub className="cursor-pointer w-5 h-5"/></Link></li>
+                  <li className='text-right'><Link href={github}><FaLink className="cursor-pointer w-4 h-4"/></Link></li>
                 </ul>
               </div>
             </div>

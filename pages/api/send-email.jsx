@@ -29,7 +29,7 @@ async function sendEmail(name, email, reason, message) {
     let info = await transporter.sendMail({
       from: `"Website Contact" <contact@karimjaouhar.com>`,
       replyTo: email,
-      to: 'karimjawhar5@gmail.com',
+      to: 'jadjaouhar5@gmail.com',
       subject: `Contact Form Submission - ${name}`,
       html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Reason for Contact:</strong> ${reason}</p><p><strong>Message:</strong></p><p>${message}</p>`,
     });

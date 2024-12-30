@@ -22,18 +22,12 @@ export default function Home({ projects, summaries, techs, githubs}) {
   return (
       <div>
         <Head>
-          <title>Karim's Portfolio</title>
-          <meta name="description" content="Check out my portfolio to explore my projects, discover my journey, and get in touch." />
+          <title>Jad Jaouhar's Portfolio</title>
+          <meta name="description" content="Check out my portfolio, learn about my exprience, discover my journey, and get in touch." />
 
-          <meta property="og:title" content="Karim's Portfolio" />
-          <meta property="og:description" content="Check out my portfolio to explore my projects, discover my journey, and get in touch." />
+          <meta property="og:title" content="Jad Jaouhar's Portfolio" />
+          <meta property="og:description" content="Check out my portfolio, learn about my exprience, discover my journey, and get in touch." />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://karimjaouhar.com/" />
-
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:creator" content="@KarimJawhar02" />
-          <meta name="twitter:title" content="Karim's Portfolio" />
-          <meta name="twitter:description" content="Check out my portfolio to explore my projects, discover my journey, and get in touch." />
         </Head>
 
         <main className="text-gray-950 dark:text-gray-200 font-light">
@@ -52,7 +46,7 @@ export default function Home({ projects, summaries, techs, githubs}) {
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0, duration: 0.5, ease: "easeOut" }} 
-              className="lg:leading-snug text-4xl md:text-5xl text-gray-950 dark:text-gray-100 "><span className="font-medium">Karim Jaouhar</span>
+              className="lg:leading-snug text-4xl md:text-5xl text-gray-950 dark:text-gray-100 "><span className="font-medium">Jad Jaouhar</span>
               </motion.h1>
 
               <motion.p
@@ -60,21 +54,21 @@ export default function Home({ projects, summaries, techs, githubs}) {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }} 
                className="mt-8 md:mt-10">
-                A <b className="font-medium">cybersecurity consultant at Deloitte</b>, specializing in cryptography and data protection. After earning a BSc. degree in Computer Science, I dove curiously into the world of cybersecurity. Since then, I’ve had the privilege of helping organizations across industries like finance, healthcare, and consumer strengthen their data security and privacy posture.
+                Hi, my name is Jad Jaouhar. I am a Canadian-educated undergraduate currently pursuing a degree in <b className="font-medium">Banking and Finance at the Lebanese American University (LAU)</b>. My professional experience spans customer service, financial transaction oversight, and business growth strategies in the retail industry. At Freshway Retail Establishment, I played a pivotal role in enhancing customer satisfaction and implementing strategies that drove financial growth and business expansion.
                </motion.p>
                <motion.p
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }} 
               className="mt-4 md:mt-6">
-               When I’m not working, you’ll likely find me skateboarding or geeking out over the latest cybersecurity trends and emerging technologies. I’m passionate about programming and embedded systems, and I have a knack for building overly engineered IoT solutions to solve simple problems. On the side, I run a web development agency, helping businesses in the Greater Toronto Area grow their online presence.
+               Beyond my professional endeavors, I am deeply committed to giving back to my community. I have volunteered with Operation Big Blue, contributing to the preservation and cleanup of Lebanon’s coastline, and provided care and companionship to residents at Trafalgar Lodge Retirement Housing. These experiences have enriched my perspective and strengthened my passion for fostering positive change both professionally and personally.
                </motion.p>
               <motion.ul
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.5, ease: "easeOut" }} 
               className="mt-10 md:mt-12 text-blue-500 dark:text-blue-300">
-                {activeSection=="Projects"?<li><a className="cursor-pointer font-medium">__ Projects</a></li>:<li><a className="cursor-pointer hover:font-medium" onClick={()=> handleClick('Projects')}>_ Projects</a></li>}
+                {activeSection=="Projects"?<li><a className="cursor-pointer font-medium">__ Experience</a></li>:<li><a className="cursor-pointer hover:font-medium" onClick={()=> handleClick('Projects')}>_ Experience</a></li>}
                 {activeSection=="Experience"?<li className="pt-2"><a className="cursor-pointer font-medium">__ Timeline</a></li>:<li className="pt-2"><a className="cursor-pointer hover:font-medium" onClick={()=> handleClick('Experience')}>_ Timeline</a></li>}
                 {activeSection=="Connect"?<li className="pt-2"><a  className="cursor-pointer font-medium">__ Connect</a></li>:<li className="pt-2"><a  className="cursor-pointer hover:font-medium" onClick={()=>handleClick('Connect')}>_ Connect</a></li>}
               </motion.ul>
@@ -86,13 +80,7 @@ export default function Home({ projects, summaries, techs, githubs}) {
                className="flex mt-10 md:mt-16 mb-8">
               <ul className="flex w-1/2 text-sm space-x-3">
                 <li>
-                  <a target="_blank" href="https://github.com/karimjawhar5">
-                    <FaGithub className="cursor-pointer w-6 h-6  md:w-5 md:h-5 inline-block" />
-                    <span className="pl-2 hidden md:inline-block">GitHub</span>
-                  </a>
-                </li>
-                <li>
-                  <a target="_blank" href="https://www.linkedin.com/in/karimjaouhar/">
+                  <a target="_blank" href="https://www.linkedin.com/in/jadjaouhar/">
                     <FaLinkedin className="cursor-pointer w-6 h-6  md:w-5 md:h-5 inline-block" />
                     <span className="pl-2 hidden md:inline-block">LinkedIn</span>
                   </a>
@@ -101,12 +89,12 @@ export default function Home({ projects, summaries, techs, githubs}) {
               <ul className="flex w-1/2 text-sm space-x-3 md:space-x-4 justify-end -mt-1 md:-mt-2">
                 <li>
                   <button className="bg-gray-200 dark:bg-gray-800 font-normal py-2 px-4 rounded-full ml-5">
-                  <a href="/Karim_Jaouhar.pdf" download> Resume</a>
+                  <a href="/Jad_Jaouhar.pdf" download> Resume</a>
                 </button>
                 </li>
                 <li>
                   <button className="bg-gray-200 dark:bg-gray-800 font-normal py-2 px-4 rounded-full">
-                  <a href="mailto:karimjawhar5@gmail.com"> Email</a>
+                  <a href="mailto:jadjaouhar5@gmail.com"> Email</a>
                 </button>
                 </li>
               </ul>

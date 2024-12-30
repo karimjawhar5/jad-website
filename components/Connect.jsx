@@ -67,14 +67,12 @@ function Connect() {
 
         <div>
           <ul className='space-y-2 md:space-y-3 mb-6 md:mb-8 mt-6 md:mt-0'>
-            <li><u><b>Full Name:</b></u> &nbsp; Karim Jaouhar</li>
-            <li><Link href="tel:14379616674"><u><b>Phone:</b></u> &nbsp; +1 (437) 961 6674</Link></li>
-            <li><Link href="mailto:karimjawhar5@gmail.com"><u><b>Email:</b></u> &nbsp; karimjawhar5@gmail.com</Link></li>
+            <li><u><b>Full Name:</b></u> &nbsp; Jad Jaouhar</li>
+            <li><Link href="tel:+96170742312"><u><b>Phone:</b></u> &nbsp; +961 (70) 742 312</Link></li>
+            <li><Link href="mailto:karimjawhar5@gmail.com"><u><b>Email:</b></u> &nbsp; jadjaouhar5@gmail.com</Link></li>
           </ul>
           <ul className='flex space-x-4 text-sm md:text-sm font-medium text-blue-500 dark:text-blue-200'>
-            <li><a target="_blank" href="https://www.linkedin.com/in/karimjaouhar/"><FaLinkedin className='inline-block w-5 h-5'/><p className='inline-block pl-2'>LinkedIn</p></a></li>
-            <li><a target="_blank" href="https://twitter.com/KarimJawhar02"><FaTwitter className='inline-block w-5 h-5'/><p className='inline-block pl-2'>Twitter</p></a></li>
-            <li><a target="_blank" href="https://github.com/karimjawhar5"><FaGithub className='inline-block w-5 h-5'/><p className='inline-block pl-2 '>Github</p></a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/jadjaouhar/"><FaLinkedin className='inline-block w-5 h-5'/><p className='inline-block pl-2'>LinkedIn</p></a></li>
           </ul>
         </div>
       </motion.div >
