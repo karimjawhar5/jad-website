@@ -12,7 +12,7 @@ function Layout({children}) {
 
       <main style={{ flex: 1 }}>{children}</main>
 
-      <footer className='w-full text-center text-xs font-light py-2 dark:text-gray-300 text-gray-800'>© 2023 Karim Jaouhar - Portfolio Website</footer>
+      <footer className='w-full text-center text-xs font-light py-2 dark:text-gray-300 text-gray-800'>© 2024 Jad Jaouhar - Portfolio Website</footer>
 
     </div>
   )
