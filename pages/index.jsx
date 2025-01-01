@@ -54,14 +54,14 @@ export default function Home({ projects, summaries, techs, githubs}) {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }} 
                className="mt-8 md:mt-10">
-                Hi, my name is Jad Jaouhar. I am a Canadian-educated undergraduate currently pursuing a degree in <b className="font-medium">Banking and Finance at the Lebanese American University (LAU)</b>. My professional experience spans customer service, financial transaction oversight, and business growth strategies in the retail industry. At Freshway Retail Establishment, I played a pivotal role in enhancing customer satisfaction and implementing strategies that drove financial growth and business expansion.
+                I am a Canadian-educated undergraduate pursuing a degree in <b className="font-medium">Banking and Finance at the Lebanese American University (LAU)</b>. My experience spans customer service, financial transaction oversight, and implementing strategies to enhance customer satisfaction and drive business growth in the retail industry. With a passion for understanding financial systems and the evolving world of finance and economics, I have also developed automation systems and personal projects, sharpening skills in process optimization, tool integration, and innovative problem-solving.
                </motion.p>
                <motion.p
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }} 
               className="mt-4 md:mt-6">
-               Beyond my professional endeavors, I am deeply committed to giving back to my community. I have volunteered with Operation Big Blue, contributing to the preservation and cleanup of Lebanon’s coastline, and provided care and companionship to residents at Trafalgar Lodge Retirement Housing. These experiences have enriched my perspective and strengthened my passion for fostering positive change both professionally and personally.
+               Beyond my professional pursuits, I am committed to community impact, contributing to initiatives like Operation Big Blue and supporting residents at Trafalgar Lodge Retirement Housing. These experiences have strengthened my ability to blend technical expertise with a dedication to meaningful change.
                </motion.p>
               <motion.ul
               initial={{ y: 10, opacity: 0 }}
